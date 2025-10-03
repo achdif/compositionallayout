@@ -107,7 +107,7 @@ class ViewController: UIViewController {
                 let itemSize = NSCollectionLayoutSize(widthDimension: .absolute(140), heightDimension: .fractionalHeight(1.0))
                 let item = NSCollectionLayoutItem(layoutSize: itemSize)
 
-                let groupSize = NSCollectionLayoutSize(widthDimension: .absolute(140), heightDimension: .absolute(220))
+                let groupSize = NSCollectionLayoutSize(widthDimension: .absolute(140), heightDimension: .absolute(230))
                 let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
 
                 section = NSCollectionLayoutSection(group: group)
