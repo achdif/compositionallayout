@@ -38,9 +38,10 @@ class MovieCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func configure(with movie: MovieModel) {
-        titleLabel.text = movie.title ?? "No Title"
-
+    func configure(with movie: Movie) {
+        titleLabel.text = movie.title
+        
+        print("yohoho https://image.tmdb.org/t/p/w500\(movie.posterPath)")
         if let path = movie.posterPath,
            let url = URL(string: "https://image.tmdb.org/t/p/w500\(path)") {
             posterImageView.load(url: url)
