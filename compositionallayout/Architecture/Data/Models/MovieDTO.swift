@@ -19,25 +19,11 @@ public struct MovieDTO: Decodable, Hashable {
     public enum CodingKeys: String, CodingKey {
         case id
         case title
-        case posterPath = "poster_path"
+        case posterPath
         case overview
-        case releaseDate = "release_date"
-        case voteAverage = "vote_average"
-        case voteCount = "vote_count"
-    }
-
-    public init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        id = try container.decode(Int.self, forKey: .id)
-        title = try container.decode(String.self, forKey: .title)
-        posterPath = try container.decodeIfPresent(String.self, forKey: .posterPath)
-        overview = try container.decodeIfPresent(String.self, forKey: .overview)
-        releaseDate = try container.decodeIfPresent(String.self, forKey: .releaseDate)
-        voteAverage = try container.decodeIfPresent(Double.self, forKey: .voteAverage)
-        voteCount = try container.decodeIfPresent(Int.self, forKey: .voteCount)
-
-        print("🔄 [DTO] Decoded MovieDTO - ID: \(id), Title: \(title ?? "nil")")
-        print("🖼️ [DTO] Poster path: \(posterPath ?? "nil")")
+        case releaseDate
+        case voteAverage
+        case voteCount
     }
 }
 
