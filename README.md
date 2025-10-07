@@ -13,6 +13,9 @@ A simple UIKit-based iOS app that displays movies from The Movie Database (TMDb)
 - Smooth updates with **UICollectionViewDiffableDataSource**
 - Section headers with titles and pinning behavior
 - Loading indicator while fetching movies
+- **Clean Architecture** with proper separation of concerns (Data, Domain, Presentation layers)
+- **Network Interceptor** for request/response handling and customization
+- **Combine + URLSession** for reactive network requests
 - Modular and scalable code structure
 
 ---
